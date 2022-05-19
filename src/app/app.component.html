@@ -1,26 +1,97 @@
-<h1 class="title">
-    DEVELOPPEMENT TFE
-</h1>
-<mat-toolbar color="primary">
-     <mat-toolbar-row>
-        <h3>BOUTIKline </h3>
-        <button mat-button><mat-icon>home</mat-icon> Accueil</button>
-        <button mat-button><mat-icon></mat-icon> Achats</button>
-        <button mat-button><mat-icon></mat-icon> News</button>
-        <button mat-button><mat-icon></mat-icon> Promotions</button>
-        <button mat-button><mat-icon>contact</mat-icon> Contact</button>
-        <button mat-button><mat-icon></mat-icon> A propos de nous</button>
-        
-    </mat-toolbar-row>
-        
-</mat-toolbar>
-<mat-sidenav-container>
-    <mat-sidenav [(opened)]= "opened"  mode="side">
-        Start
-    </mat-sidenav>
-    <mat-sidenav-content>
-        End
-        <button mat-button (click)="opened = opened">Toggle</button>
-    </mat-sidenav-content>
+     
+ <mat-menu #menu="matMenu" class="matmenu">
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoProduitClick()"> <mat-icon>launch</mat-icon>Produits</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue;border-radius: 15px;" (click)="gotoMarqueClick()"> <mat-icon>launch</mat-icon>Marques</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoCategorieClick()"> <mat-icon>launch</mat-icon>Catégories</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoStockClick()"> <mat-icon>launch</mat-icon>Stock</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoNewsClick()"> <mat-icon>launch</mat-icon>News</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoPromotionClick()"> <mat-icon>launch</mat-icon>Promotions</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoClientClick()"> <mat-icon>launch</mat-icon>Clients</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoCommandeClick()"> <mat-icon>launch</mat-icon>Commandes</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoGerantClick()"> <mat-icon>launch</mat-icon>Gétants</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style=" background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoFournisseurClick()"> <mat-icon>launch</mat-icon>Fournisseurs</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoPventeClick()"> <mat-icon>launch</mat-icon>Points de Ventes</button>
+   <mat-divider></mat-divider>
+   <button mat-menu-item style="background-color: cadetblue;color: aliceblue; border-radius: 15px;" (click)="gotoSignaletiqueClick()"> <mat-icon>launch</mat-icon>Signaletiques</button>
+   <mat-divider></mat-divider>
+  
+ </mat-menu>
 
-</mat-sidenav-container>
+        
+        <mat-toolbar color="primary">
+            <mat-toolbar-row  class="navbar">  
+              
+      
+                        <h4>BOUTIKline</h4>
+                      
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/recherche'"><h5><mat-icon>search</mat-icon>Recherche</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/signin'"><h5><mat-icon>account_circle</mat-icon>S'inscrire</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/signin'"><h5><mat-icon>shopping_basket</mat-icon>Panier</h5></a></span>
+                    
+                    
+            </mat-toolbar-row>     
+            <mat-divider [inset]="true"></mat-divider>      
+            <mat-toolbar-row  class="navbar">  
+              
+                    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+                    
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/accueil'"><h5><mat-icon>home</mat-icon>Accueil</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/news'"><h5><mat-icon>info</mat-icon>News</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/promos'"><h5><mat-icon>percentage</mat-icon>Promos</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/contact'"><h5><mat-icon> contacts</mat-icon>Contact</h5></a></span>
+                        <span><a mat-button style="color:white ;text-decoration: none;" [routerLink]="'/apropos'"><h5><mat-icon>about_us</mat-icon>A Propos de nous</h5></a></span>
+                       
+                  
+                    
+            </mat-toolbar-row>            
+        </mat-toolbar>
+        
+<!-- <mat-sidenav-container>
+   <mat-sidenav [(opened)]= "opened"  mode="side">
+    
+    <mat-list>
+      <mat-list-item><a href routerlink="'/gescategorie'">Catégories</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gesclient'">Clients</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gescommande'">Commandes</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gesfournisseur'">Fournisseurs</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gesgerant'">Gérants</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gesmarque'">Marques</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gesproduit'">Produits</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gespromo'">Promos</a></mat-list-item>
+      <mat-list-item><a href routerlink="'/gespvente'">Points Ventes</a></mat-list-item>
+  </mat-list>
+   </mat-sidenav>
+   <mat-sidenav-content>
+      <router-outlet></router-outlet>
+   </mat-sidenav-content>
+
+</mat-sidenav-container> -->
+<router-outlet></router-outlet>

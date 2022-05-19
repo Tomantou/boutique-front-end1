@@ -1,0 +1,33 @@
+#conteneur{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  background-color:silver;
+
+}
+#conteneurbouton{
+  display: flex;
+  justify-content:right;
+
+}
+
+.example-form {
+    min-width: 250px;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 90%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+
+  mat-form-field.mat-form-field {
+    font-size: 18px;
+  }
+
+ 
+  

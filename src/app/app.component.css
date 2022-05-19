@@ -4,5 +4,43 @@ mat-sidenav-container{
 
 mat-sidenav{
     width: 200px;
-    background-color: aliceblue;
+    background-color: wheat;
 }
+
+.matmenu{
+    background-color: darkolivegreen;
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+.navbar{
+    display: flex;
+    justify-content:center;
+    background-color:darkblue;
+}
+
+span{
+    padding-right: 4rem;
+}
+
+.example-button-container {
+    text-decoration:none;
+    display: flex;
+    justify-content:space-between;
+    width: 125px;
+   
+  }
+
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+    text-decoration:none;
+    background-color: azure;
+    
+    
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
