@@ -7,4 +7,5 @@ export class Categorie {
          this.Id = id;
          this.libelle =lib;
    }
+   
 }
