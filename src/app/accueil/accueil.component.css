@@ -5,5 +5,15 @@
     flex-wrap: wrap;
     background-color:antiquewhite;
 }
+
+img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+img:hover{
+    opacity: 0.5;
+    width: 200px;
+    height: 200px;
+}
   
   

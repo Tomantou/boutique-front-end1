@@ -8,7 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -17,6 +17,19 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatTableDataSource} from '@angular/material/table';
+import {HttpClientModule} from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { FormControl, NgForm} from '@angular/forms';
+import * as _ from 'lodash';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
+
 import { GescategorieComponent } from './gescategorie/gescategorie.component';
 import { GesclientComponent } from './gesclient/gesclient.component';
 import { GescommandeComponent } from './gescommande/gescommande.component';
@@ -37,11 +50,11 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { RechercheComponent } from './recherche/recherche.component';
 import { SigninComponent } from './signin/signin.component';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatCardModule} from '@angular/material/card';
-import {MatTabsModule} from '@angular/material/tabs';
-import { GesproduitComponent } from './gesproduit/gesproduit.component';
+import {GesproduitComponent } from './gesproduit/gesproduit.component';
+import { HeaderComponent } from './header/header.component';
+import { BotomComponent } from './botom/botom.component';
+import { CreatecategorieComponent } from './createcategorie/createcategorie.component';
+
 
 @NgModule({
   declarations: [
@@ -67,6 +80,10 @@ import { GesproduitComponent } from './gesproduit/gesproduit.component';
     RechercheComponent,
     SigninComponent,
     GesproduitComponent,
+    HeaderComponent,
+    BotomComponent,
+    CreatecategorieComponent,
+    
    
   ],
   imports: [
@@ -77,7 +94,6 @@ import { GesproduitComponent } from './gesproduit/gesproduit.component';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    FormsModule,
     MatListModule,
     MatButtonToggleModule,
     MatSliderModule,
@@ -92,7 +108,16 @@ import { GesproduitComponent } from './gesproduit/gesproduit.component';
     MatDividerModule,
     MatCardModule,
     MatTabsModule,
+    MatTableModule,
+    HttpClientModule,
   
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+  
+
+    
     
 
   ],

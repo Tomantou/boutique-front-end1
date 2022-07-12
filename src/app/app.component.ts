@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,8 +12,10 @@ export class AppComponent {
 
   title = 'Boutiklapp';
   opened = false;
+  
 
   gotoProduitClick(): void{
+    
     this.router.navigate(['gesproduit']);
  }
 
